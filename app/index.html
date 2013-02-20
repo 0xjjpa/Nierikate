@@ -24,7 +24,11 @@
       <nav class="left"><a href="#application-menu" data-router="aside" data-icon="menu"></a></nav>
     </header>
     <article id="main-application" data-transition="slide" class="active list indented scroll">
-      <li class="highlight"><a href="#template-main" data-router="section" class="button anchor theme">Travel to Section Template</a></li>
+      <li class="highlight">
+        <input type="file" id="filereader-files" accept="image/*" multiple style="visibility: hidden"><a id="file-select" href="#" class="button anchor theme">Load Image</a>
+      </li>
+      <li class="highlight"><strong>
+          <output id="filereader-list"></output></strong></li>
     </article>
     <article id="item-application-1" data-transition="slide" class="list">
       <li class="highlight"><strong>Item 1</strong></li>
@@ -99,8 +103,11 @@
     </article>
   </aside><!--
   <Lungo>- Dependencies </Lungo>-->
+  <script src="https://cdn.firebase.com/v0/firebase.js"></script>
   <script src="components/quojs/quo.js"></script>
-  <script src="components/lungo/lungo.js"></script><!--
+  <script src="components/lungo/lungo.js"></script>
+  <script src="components/nierikate/utils.js"></script>
+  <script src="components/nierikate/nierikate.js"></script><!--
   <Lungo>- Sandbox App </Lungo>-->
   <script>
     Lungo.init({

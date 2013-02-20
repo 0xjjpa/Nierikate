@@ -4,8 +4,12 @@ section#application-main(data-transition='slide')
         a(href='#application-menu', data-router='aside', data-icon='menu')
     article#main-application.active.list.indented.scroll(data-transition='slide')
       li.highlight
-        a.button.anchor.theme(href='#template-main', data-router='section')
-          | Travel to Section Template
+        input(type="file", id="filereader-files", accept="image/*", multiple, style="visibility: hidden")
+        a#file-select.button.anchor.theme(href='#')
+          | Load Image
+      li.highlight
+        strong
+          output#filereader-list
     article#item-application-1.list(data-transition='slide')
       li.highlight
         strong
