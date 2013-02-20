@@ -1,0 +1,20 @@
+{
+  "name": "angular-lungo",
+  "description": "Bridge between AngularJS and LungoJS",
+  "version": "0.0.0",
+  "main": "./angular-lungo.js",
+  "author": {
+    "name": "Centralway Factory"
+  },
+  "dependencies": {
+    "lungo": "latest",
+    "angular-resource": "1.0.4"
+  },
+  "readme": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jjperezaguinaga/bower-angular-lungo"
+  },
+  "_id": "angular-lungo@0.0.1",
+  "commit": "39326247a8da1d59f977e7bde2aa8018f9f1e3f7"
+}
