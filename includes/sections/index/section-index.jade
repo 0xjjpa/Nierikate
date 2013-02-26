@@ -3,13 +3,16 @@ section#application-main(data-transition='slide')
       nav.left
         a(href='#application-menu', data-router='aside', data-icon='menu')
     article#main-application.active.list.indented.scroll(data-transition='slide')
-      li.highlight
-        input(type="file", id="filereader-files", accept="image/*", multiple, style="visibility: hidden")
-        a#file-select.button.anchor.theme(href='#')
+      input(type="file", id="filereader-files", accept="image/*|audio/*|video/*", multiple, style="visibility: hidden")
+      li.highlight        
+        a.loadFile.button.anchor.theme(href='#', data-type="image")
           | Load Image
-      li.highlight
-        strong
-          output#filereader-list
+      li.highlight        
+        a.loadFile.button.anchor.theme(href='#', data-type="audio")
+          | Load Audio
+      li.highlight        
+        a.loadFile.button.anchor.theme(href='#', data-type="video")
+          | Load Video
     article#item-application-1.list(data-transition='slide')
       li.highlight
         strong

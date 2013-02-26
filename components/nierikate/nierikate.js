@@ -1,13 +1,22 @@
-var f = new Firebase('https://jjperezaguinaga.firebaseio.com/photo_title');
-var oFReader = new FileReader();
+window.oFReader = new FileReader();
+window.selectedFileType = null;
 
 oFReader.onload = function (oFREvent) {
+  var f = new Firebase('https://jjperezaguinaga.firebaseio.com/'+selectedFileType);
   f.set(oFREvent.target.result);
 };
 
-document.querySelector('#file-select').addEventListener('click', function(e) {
+function loadEventListener(e) {
+  selectedFileType = e.target.getAttribute("data-type");
   document.querySelector('#filereader-files').click();
-}, false);
+}
+
+(function() {
+	var buttons = document.querySelectorAll('.loadFile');
+	for (var i = 0, len = buttons.length; i < len; i++) {
+		buttons[i].addEventListener('click', loadEventListener, false);
+	}
+})()
 
 document.querySelector('#filereader-files').onchange = function(e) {
   var files = e.target.files; // FileList

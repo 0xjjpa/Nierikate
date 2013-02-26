@@ -24,11 +24,10 @@
       <nav class="left"><a href="#application-menu" data-router="aside" data-icon="menu"></a></nav>
     </header>
     <article id="main-application" data-transition="slide" class="active list indented scroll">
-      <li class="highlight">
-        <input type="file" id="filereader-files" accept="image/*" multiple style="visibility: hidden"><a id="file-select" href="#" class="button anchor theme">Load Image</a>
-      </li>
-      <li class="highlight"><strong>
-          <output id="filereader-list"></output></strong></li>
+      <input type="file" id="filereader-files" accept="image/*|audio/*|video/*" multiple style="visibility: hidden">
+      <li class="highlight">       <a href="#" data-type="image" class="loadFile button anchor theme">Load Image</a></li>
+      <li class="highlight">       <a href="#" data-type="audio" class="loadFile button anchor theme">Load Audio</a></li>
+      <li class="highlight">       <a href="#" data-type="video" class="loadFile button anchor theme">Load Video</a></li>
     </article>
     <article id="item-application-1" data-transition="slide" class="list">
       <li class="highlight"><strong>Item 1</strong></li>
