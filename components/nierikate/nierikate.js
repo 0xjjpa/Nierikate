@@ -2,12 +2,17 @@ window.oFReader = new FileReader();
 window.selectedFileType = null;
 
 oFReader.onload = function (oFREvent) {
-  var f = new Firebase('https://jjperezaguinaga.firebaseio.com/'+selectedFileType);
-  f.set(oFREvent.target.result);
+  var f = new Firebase('https://jjperezaguinaga.firebaseio.com/');
+  var dataType = f.child(selectedFileType);
+  var latest = f.child('latest');
+  console.log("Setting latest: "+selectedFileType);
+  latest.set(selectedFileType);
+  dataType.set(oFREvent.target.result);
 };
 
 function loadEventListener(e) {
   selectedFileType = e.target.getAttribute("data-type");
+  console.log("Data type recorded:" +selectedFileType);
   document.querySelector('#filereader-files').click();
 }
 
